@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  nolakoa-app:
+    build: .
+    container_name: nolakoa-naiz-ni
+    restart: unless-stopped
+    network_mode: host
+    environment:
+      - OLLAMA_URL=http://127.0.0.1:11434/api/generate
+    depends_on:
+      - ollama
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama
+    restart: unless-stopped
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    # Descomentar si tienes GPU NVIDIA:
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: all
+    #           capabilities: [gpu]
+
+  caddy:
+    image: caddy:latest
+    container_name: caddy-proxy
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - caddy_data:/data
+      - caddy_config:/config
+
+volumes:
+  ollama_data:
+  caddy_data:
+  caddy_config:

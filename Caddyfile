@@ -1,0 +1,6 @@
+# Caddyfile para nolakoa.duckdns.org
+# Caddy obtiene SSL automáticamente de Let's Encrypt
+
+nolakoa.duckdns.org {
+    reverse_proxy 127.0.0.1:8096
+}
