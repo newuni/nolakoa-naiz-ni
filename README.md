@@ -1,3 +1,6 @@
+> 🎓 **Proyecto educativo** - Desarrollado como trabajo de Tecnología para 4º ESO en San Felix Ikastola. 
+> El objetivo es aprender sobre desarrollo web, contenedores Docker e Inteligencia Artificial de forma práctica.
+
 # 🌈 Nolakoa Naiz Ni?
 
 Test de bienestar emocional en euskera con análisis de IA.
