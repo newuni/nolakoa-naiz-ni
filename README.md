@@ -217,3 +217,13 @@ MIT
 
 Creado por Alba y Leizuri para San Felix Ikastola.  
 Desarrollo técnico asistido por Nimbus 🐙
+
+
+## Responsible Use
+
+Use this project only for lawful, authorized purposes.
+
+
+## Third-Party Services & Trademarks
+
+Third-party names and trademarks belong to their respective owners; no affiliation is implied.
